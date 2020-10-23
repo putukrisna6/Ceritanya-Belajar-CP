@@ -12,6 +12,12 @@ int surfaceArea(vector<vector<int>> A)
         {
         	Mat[i][j] = 0;
         }
+		// Made a new matrix enveloping the old one w/ 0s for easier counting and less if hells
+		// IE 0 0 0 0 0
+		//    0 1 1 1 0
+		//    0 2 2 2 0
+		//    0 1 1 1 0
+		//    0 0 0 0 0
 	}
 	
 	for (int i=1; i<= H; i++)
@@ -41,6 +47,7 @@ int surfaceArea(vector<vector<int>> A)
            area+=max(0, Mat[i][j]-Mat[i][j-1]);
            area+=max(0, Mat[i][j]-Mat[i][j+1]);
            //cout << i << " " << j << " " << area << endl;
+		// Using Max to avoid if hells again, learned it the hard way
         }
     }
     //cout << area + topdown << endl;
@@ -53,5 +60,6 @@ int main()
     vector<vector<int>> vec{{1, 3, 4},
                             {2, 2, 3},
                             {1, 2, 4}};
+	// sample input
     surfaceArea(vec);
 }
