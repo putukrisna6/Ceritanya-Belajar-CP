@@ -13,6 +13,7 @@ void solve()
     int n, k;
     cin >> n >> k;
     int ok = 0;
+    //OK means not late and i dont think an array is needed for this problem right ?
     for (int i = 0; i < n; i++)
     {
         int temp;
