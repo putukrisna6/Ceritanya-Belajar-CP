@@ -6,4 +6,4 @@ for problems from websites like HackerRank and Toki, or from competitions.
 
 Currently all solutions are in C++
 
-Created in collaboration with Daniel Sugianto and Bayu Adjie Sidhartha
+Created in collaboration with Daniel Sugianto and Bayu Adjie Sidharta
