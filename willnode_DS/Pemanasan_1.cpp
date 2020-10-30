@@ -2,6 +2,15 @@
 
 using namespace std;
 
+/*  the idea is to use maps to swap out the chars
+*   result is printed char by char
+*
+*   potential problems is the need for two EOFs instead of (what I think it is supposed to be), 1 EOF
+*
+*   potential solution is to receive the whole key,value pair as a whole string and process it as such
+*   or somehow I can hack that weird scanf shits
+*/
+
 int main() {
     map<char, char> m;
     string ans = "", que;
