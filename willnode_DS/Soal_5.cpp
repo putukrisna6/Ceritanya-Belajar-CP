@@ -1,7 +1,24 @@
 #include <bits/stdc++.h>
-
 #define PAIR pair<string, int>
 
+/*  I approach this one by making the decimal number to a binary stored in a string,
+*   then hook up a algorithm to search longest palindrome in a substr
+*   --------------------------------------------------------------------------------
+*   I removed unnecessary zeroes to make the string shorter, 
+*   unnecessary zeroes for example the 000000 of 0000001
+*   --------------------------------------------------------------------------------
+*   the algorithm to search the palindrome is courtesy of gfg, so :c
+*   --------------------------------------------------------------------------------
+*   potential problems exist in tons in this one lmao
+*   1. TLE! because the strings are processed intensively, so many iterations going on
+*   2. Partial AC, because if there exist multiple same length palindromes but different values, like
+*       11011 and 11111 in binary 11011111, it might return 11011 because there are no check to compare the values
+*       I got around this by prioritizing the front end of the str first, but if it's the other way around 11111011,
+*       I believe the problem will persists
+*   potential solutions
+*   1. I have no idea!
+*   2. To check the palindromes by length and by decimal values, but that approach might make it definitely TLE though
+*/
 
 using namespace std;
 
