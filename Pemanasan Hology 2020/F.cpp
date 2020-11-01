@@ -24,7 +24,6 @@ int tangga(int numSteps, int multiples) {
     while (tempSteps % multiples != 0) {
         if (twos > 0) twos--;
         left = numSteps - ((twos * 2) + ones);
-        // cout << "left " << left << endl;
         
         while (left > 0) {
             left--;
@@ -32,7 +31,6 @@ int tangga(int numSteps, int multiples) {
         }
         tempSteps = twos + ones;
     }
-    // cout << "twos " << twos << " ones " << ones << endl;
     if (twos < 0 || ones < 0) return -1;
     steps = twos + ones;
 
