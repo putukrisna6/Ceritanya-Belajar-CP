@@ -1,39 +1,57 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
 
+#define ar array
+#define ll long long
 
+const int MAX_N = 1e5 + 1;
+const int MOD = 1e9 + 7;
 
-bool solveUtil(vector<int> &v, vector<int> &b, vector<int> &a, int n) {
-    if(a[n - 1] == 0)
-        return false;
-
+void solve()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    int check[n];
+    int count = 1;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        int divisor[n] ;
+		divisor[0]= arr[i];
+		int divelem = 1;
+        int rn = 1;
+        for (int j = i + 1; j < n; j++)
+        {
+        	int flag = 1;
+            for (int k=0;k<divelem;k++)
+            {
+            	if (arr[j] % divisor[k] != 0)
+	            {
+	                flag = 0;
+	            }
+	            if (flag == 1)
+	            {
+	            	divisor[divelem] = arr[j] ;
+	            	divelem++;
+	                rn++;
+				}
+			}
+        }
+        cout << endl;
+        if (rn > count)
+        {
+            count++;
+        }
+    }
+    cout << count << endl;
 }
 
-void solve(vector<int> &v, vector<int> &b) {
-    vector<int> a;
-    for(int i = 0; i < b.length(); i++) {
-
-    }
-}
-
-int main() {
-    int t, n, val;
-    vector<int> v, b;
-    cin >> t;
-    while(t--) {
-        cin >> n;
-        for(int i = 0; i < 2 * n; i++) {
-            v.push_back(i + 1);
-        }
-
-        for(int i = 0; i < n; i++) {
-            cin >> val;
-            b.push_back(val);
-        }
-
-
-
-        v.clear();
-        b.clear();
-    }
+int main()
+{
+    solve();
 }
